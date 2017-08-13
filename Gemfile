@@ -12,6 +12,7 @@ end
 # #2
 group :development do
   gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 group :development, :test do
@@ -28,5 +29,5 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-# Use Bootstrap and Sass for that CSS 
+# Use Bootstrap and Sass for that CSS
 gem 'bootstrap-sass'
