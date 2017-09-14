@@ -10,7 +10,7 @@ require 'random_data'
 end
 advertisement = Advertisement.all
 
-Advertisement.find_or_create_by!(title: "test title", body: "test body", price: "test price")
+Advertisement.find_or_create_by!(title: "test title", body: "test body", price: 15)
 
 puts "Seed finished"
 puts "#{Advertisement.count} ads created"
