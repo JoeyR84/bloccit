@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :question
+  resources :topics do
+    resources :posts, except: [:index]
+  end
+
+  resources :questions
 
   resources :advertisement
 

@@ -1,8 +1,18 @@
 require 'random_data'
 
+# Create Topics
+15.times do
+  Topic.create!(
+    name:         RandomData.random_sentence,
+    description:  RandomData.random_paragraph
+  )
+end
+topics = Topic.all
+
 # Create Posts
 50.times do
   Post.create!(
+    topic:  topics.sample,
     title:  RandomData.random_sentence,
     body:   RandomData.random_paragraph
   )
@@ -29,6 +39,7 @@ Post.find_or_create_by!(title: "check 16 test title", body: "check 16 test body"
 Comment.find_or_create_by!(body: "check 16 test comment", post: Post.find_or_create_by!(title: "check 16 test title", body: "check 16 test body"))
 
 puts "Seed finished"
+puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Question.count} questions created"
