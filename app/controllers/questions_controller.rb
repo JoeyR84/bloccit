@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    @question = Question.all
+    @questions = Question.all
   end
 
   def show
@@ -42,7 +42,7 @@ class QuestionsController < ApplicationController
 
     if @question.destroy
       flash[:notice] = "\"#{@question.title}\" was deleted successfully."
-      redirect_to question_path
+      redirect_to questions_path
     else
       flash[:error] = "There was an error deleting the question."
       render :show
