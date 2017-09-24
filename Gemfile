@@ -32,3 +32,5 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Use Bootstrap and Sass for that CSS
 gem 'bootstrap-sass'
+# Used for encrypting User passwords
+gem 'bcrypt'
