@@ -62,9 +62,18 @@ end
 # # SponsoredPost.find_or_create_by!(title: "check 16 test title", body: "check 16 test body", price: 99)
 # Comment.find_or_create_by!(body: "check 16 test comment", post: Post.find_or_create_by!(title: "check 16 test title", body: "check 16 test bodyyyyyyyyyyyyyyyyyyyyyyyyyy"))
 
-user = User.first
-user.update_attributes!(
-  email: 'joeyr84@gmail.com',
+# Create an admin user
+admin = User.create!(
+  name:     'Admin User',
+  email:    'admin@example.com',
+  password: 'helloworld',
+  role:     'admin'
+)
+
+# Create a member
+member = User.create!(
+  name:     'Member User',
+  email:    'member@example.com',
   password: 'helloworld'
 )
 
