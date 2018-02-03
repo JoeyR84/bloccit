@@ -11,9 +11,16 @@
       <div class="media-body">
         <h2 class="media-heading"><%= @user.name %></h2>
         <small>
-          <%= pluralize(@user.posts.count, 'post') %>,
-          <%= pluralize(@user.comments.count, 'comment') %>
+          <%= postCount %>,
+
         </small>
+        <ul>
+          <% @user.favorites.each do |fav| %>
+        		<p>
+        			<%= link_to fav.post.title, topic_post_path(fav.post.topic_id, fav.post) %>
+        		</p>
+        	<% end %>
+        </ul>
       </div>
     </div>
   </div>
