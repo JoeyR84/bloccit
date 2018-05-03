@@ -1,31 +1,3 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-## Bloccit: a Reddit replica to teach the fundamentals of web development and Rails.
-
-Made with my mentor at [Bloc](http://bloc.io).
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This is a reddit replica built with ruby and rails 4. I used sqlite for the database. `rails serve` to get this thing up and running. Authentication is done with devise. 
